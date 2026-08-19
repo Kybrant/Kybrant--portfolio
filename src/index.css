@@ -101,4 +101,120 @@ h6 {
       stroke-dashoffset: 0;
     }
   }
+
+  /* Enterprise Custom Easing & Animations */
+  :root {
+    --ease-enterprise: cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  /* Card Floating Parallax (Autonomous Ambient Movements) */
+  @keyframes ambient-float-left {
+    0%, 100% {
+      transform: translateY(0px) rotateY(16deg) rotateX(6deg) rotate(-6deg);
+    }
+    50% {
+      transform: translateY(-6px) rotateY(17deg) rotateX(5deg) rotate(-5.5deg);
+    }
+  }
+
+  @keyframes ambient-float-right {
+    0%, 100% {
+      transform: translateY(0px) rotateY(-16deg) rotateX(8deg) rotate(4deg);
+    }
+    50% {
+      transform: translateY(5px) rotateY(-15deg) rotateX(9deg) rotate(3.5deg);
+    }
+  }
+
+  @keyframes ambient-float-center {
+    0%, 100% {
+      transform: translateY(0px) rotateX(6deg);
+    }
+    50% {
+      transform: translateY(-4px) rotateX(5.5deg);
+    }
+  }
+
+  /* System Scan Reveal Sweep (Soft Mint #B2D8D8) */
+  @keyframes border-scan-sweep {
+    0% {
+      transform: translateX(-150%) skewX(-20deg);
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(250%) skewX(-20deg);
+      opacity: 0;
+    }
+  }
+
+  /* Progress Bar Glow Pulse (Deep Pine Teal #006D5B) */
+  @keyframes bar-glow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 6px rgba(0, 109, 91, 0.4), inset 0 0 4px rgba(178, 216, 216, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 16px rgba(0, 109, 91, 0.9), inset 0 0 8px rgba(178, 216, 216, 0.6);
+    }
+  }
+
+  /* Deploy Button Ripple (Deep Dark Teal #004C4C) */
+  @keyframes deploy-ripple-wave {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.9;
+    }
+    100% {
+      transform: scale(2.4);
+      opacity: 0;
+    }
+  }
+
+  .animate-ambient-left {
+    animation: ambient-float-left 4s ease-in-out infinite;
+  }
+
+  .animate-ambient-right {
+    animation: ambient-float-right 4.5s ease-in-out infinite;
+    animation-delay: -2s;
+  }
+
+  .animate-ambient-center {
+    animation: ambient-float-center 6s ease-in-out infinite;
+  }
+
+  .bar-teal-glow {
+    animation: bar-glow-pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes card-gentle-float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  .animate-card-float {
+    animation: card-gentle-float 6s ease-in-out infinite;
+  }
+
+  @keyframes laser-sweep {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(200%);
+    }
+  }
+
+  .animate-laser-sweep {
+    animation: laser-sweep 3.5s ease-in-out infinite;
+  }
 }
