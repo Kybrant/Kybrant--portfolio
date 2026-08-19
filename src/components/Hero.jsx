@@ -16,10 +16,6 @@ export default function Hero() {
 
                 {/* Text Content */}
                 <div className="flex-1 text-center lg:text-left">
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-md">
-                        <div className="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></div>
-                        <span className="text-xs font-medium text-brand-text/80 uppercase tracking-widest">Autonomous Execution</span>
-                    </div>
 
                     <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.1] mb-8 tracking-tight">
                         Turn your <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-white">operational friction</span> into scalable momentum.
